@@ -282,7 +282,8 @@ const UI: Record<Lang, Record<string, string>> = {
     backToList: 'Nazad na listu',
     switchToEn: 'English',
     switchToBs: 'Bosanski',
-    categoryNoteLead: 'Napomena'
+    categoryNoteLead: 'Napomena',
+    footerCreditLead: 'Dizajn i razvoj:'
   },
   en: {
     tagline: 'Coffee and Friends are the Perfect Blend',
@@ -319,9 +320,34 @@ const UI: Record<Lang, Record<string, string>> = {
     backToList: 'Back to list',
     switchToEn: 'English',
     switchToBs: 'Bosanski',
-    categoryNoteLead: 'Note'
+    categoryNoteLead: 'Note',
+    footerCreditLead: 'Designed and developed by'
   }
 };
+
+const DEVELOPER_LINKEDIN_HREF = 'https://www.linkedin.com/in/anes-djumisic/';
+
+function DeveloperCredit({
+  t,
+  className = ''
+}: {
+  t: (key: string) => string;
+  className?: string;
+}) {
+  return (
+    <p className={`text-[9px] sm:text-[10px] font-body text-brand-muted leading-relaxed ${className}`.trim()}>
+      {t('footerCreditLead')}{' '}
+      <a
+        href={DEVELOPER_LINKEDIN_HREF}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-brand-primary underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
+      >
+        Anes Đumišić
+      </a>
+    </p>
+  );
+}
 
 const SUB_TAB_LABEL: Record<string, LocalizedText> = {
   [ALL_TAB]: { en: 'All', bs: 'Sve' }
@@ -489,13 +515,16 @@ export default function App() {
               </button>
             </motion.div>
 
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-brand-border bg-brand-surface/50 flex justify-between items-center px-8 gap-4">
-              <span className="text-[9px] tracking-[0.2em] font-heading text-brand-muted text-left leading-snug">
-                {t('hubFooter').split('•')[0]?.trim()}
-              </span>
-              <span className="text-[9px] tracking-[0.2em] font-heading text-brand-primary text-right shrink-0">
-                {t('lateNight')}
-              </span>
+            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-brand-border bg-brand-surface/50 flex flex-col gap-3 px-8 pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
+              <div className="flex justify-between items-center gap-4">
+                <span className="text-[9px] tracking-[0.2em] font-heading text-brand-muted text-left leading-snug">
+                  {t('hubFooter').split('•')[0]?.trim()}
+                </span>
+                <span className="text-[9px] tracking-[0.2em] font-heading text-brand-primary text-right shrink-0">
+                  {t('lateNight')}
+                </span>
+              </div>
+              <DeveloperCredit t={t} className="text-center" />
             </div>
           </ScreenContainer>
         )}
@@ -540,10 +569,11 @@ export default function App() {
               ))}
             </main>
 
-            <footer className="p-6 sm:p-8 bg-brand-surface border-t border-brand-border mt-auto">
+            <footer className="p-6 sm:p-8 bg-brand-surface border-t border-brand-border mt-auto pb-[max(1.5rem,env(safe-area-inset-bottom,0px))]">
               <p className="text-[9px] sm:text-[10px] text-brand-muted tracking-[0.2em] font-heading leading-loose">
                 {t('hubFooter')}
               </p>
+              <DeveloperCredit t={t} className="mt-4 pt-4 border-t border-brand-border/50" />
             </footer>
           </ScreenContainer>
         )}
@@ -660,9 +690,10 @@ export default function App() {
                 </div>
               )}
 
-              <div className="p-12">
+              <div className="p-12 pb-[max(3rem,env(safe-area-inset-bottom,0px))]">
                 <SectionDivider title={t('endOfList')} />
                 <p className="text-center text-[9px] text-brand-muted tracking-[0.35em] mt-4 uppercase font-heading">{t('footerBrand')}</p>
+                <DeveloperCredit t={t} className="text-center mt-6 max-w-md mx-auto" />
               </div>
             </main>
           </ScreenContainer>
