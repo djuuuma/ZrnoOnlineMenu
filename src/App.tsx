@@ -442,6 +442,12 @@ export default function App() {
     };
   }, [selectedItem]);
 
+  // Hub and list reuse the window scroll chain; reset when opening/changing a list so items start from the top.
+  useEffect(() => {
+    if (screen !== 'LIST') return;
+    window.scrollTo(0, 0);
+  }, [screen, activeCategory, activeSubTab]);
+
   const filteredItems = useMemo(() => {
     let items = MENU_ITEMS.filter(item => item.category === activeCategory);
     if (activeSubTab !== ALL_TAB) {
