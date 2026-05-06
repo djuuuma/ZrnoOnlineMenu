@@ -475,56 +475,60 @@ export default function App() {
 
       <AnimatePresence mode="wait">
         {screen === 'WELCOME' && (
-          <ScreenContainer key="welcome" className="flex flex-col items-center justify-center p-12 relative overflow-hidden">
-            <div className="absolute inset-0 ember-glow opacity-30 pointer-events-none" />
+          <ScreenContainer key="welcome" className="relative overflow-hidden">
+            <div className="absolute inset-0 ember-glow opacity-30 pointer-events-none z-0" />
 
-            <div className="w-16 h-1 bg-brand-primary mb-12" />
+            <div className="relative z-10 flex min-h-dvh w-full flex-col">
+              <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-8 py-10 sm:p-12">
+                <div className="w-16 h-1 bg-brand-primary mb-12 shrink-0" />
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              className="text-center z-10"
-            >
-              <h1 className="text-8xl font-black mb-4 tracking-[0.2em] leading-none">ZRNO</h1>
-              <p className="text-brand-muted font-body tracking-[0.35em] text-[10px] uppercase max-w-sm mx-auto leading-relaxed">
-                {t('tagline')}
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="absolute bottom-20 left-12 right-12 z-20 flex flex-col gap-3"
-            >
-              <button
-                type="button"
-                aria-label={lang === 'bs' ? 'Switch language to English' : 'Switch language to Bosnian'}
-                onClick={() => setLang(l => (l === 'bs' ? 'en' : 'bs'))}
-                className="w-full py-3 border border-brand-border bg-brand-surface/80 text-[10px] font-heading tracking-[0.25em] uppercase text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300 active:scale-[0.98]"
-              >
-                {lang === 'bs' ? t('switchToEn') : t('switchToBs')}
-              </button>
-              <button
-                id="enter-button"
-                onClick={() => setScreen('HUB')}
-                className="w-full py-5 border border-brand-primary text-brand-primary font-heading text-sm tracking-[0.4em] font-bold uppercase transition-all duration-500 hover:bg-brand-primary hover:text-brand-background active:scale-[0.98]"
-              >
-                {t('viewMenu')}
-              </button>
-            </motion.div>
-
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-brand-border bg-brand-surface/50 flex flex-col gap-3 px-8 pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
-              <div className="flex justify-between items-center gap-4">
-                <span className="text-[9px] tracking-[0.2em] font-heading text-brand-muted text-left leading-snug">
-                  {t('hubFooter').split('•')[0]?.trim()}
-                </span>
-                <span className="text-[9px] tracking-[0.2em] font-heading text-brand-primary text-right shrink-0">
-                  {t('lateNight')}
-                </span>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, ease: 'easeOut' }}
+                  className="text-center"
+                >
+                  <h1 className="text-8xl font-black mb-4 tracking-[0.2em] leading-none">ZRNO</h1>
+                  <p className="text-brand-muted font-body tracking-[0.35em] text-[10px] uppercase max-w-sm mx-auto leading-relaxed">
+                    {t('tagline')}
+                  </p>
+                </motion.div>
               </div>
-              <DeveloperCredit t={t} className="text-center" />
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+                className="shrink-0 px-8 pb-5 sm:px-12 flex w-full flex-col gap-3"
+              >
+                <button
+                  type="button"
+                  aria-label={lang === 'bs' ? 'Switch language to English' : 'Switch language to Bosnian'}
+                  onClick={() => setLang(l => (l === 'bs' ? 'en' : 'bs'))}
+                  className="w-full py-3 border border-brand-border bg-brand-surface/80 text-[10px] font-heading tracking-[0.25em] uppercase text-brand-muted hover:text-brand-primary hover:border-brand-primary transition-all duration-300 active:scale-[0.98]"
+                >
+                  {lang === 'bs' ? t('switchToEn') : t('switchToBs')}
+                </button>
+                <button
+                  id="enter-button"
+                  onClick={() => setScreen('HUB')}
+                  className="w-full py-5 border border-brand-primary text-brand-primary font-heading text-sm tracking-[0.4em] font-bold uppercase transition-all duration-500 hover:bg-brand-primary hover:text-brand-background active:scale-[0.98]"
+                >
+                  {t('viewMenu')}
+                </button>
+              </motion.div>
+
+              <div className="shrink-0 border-t border-brand-border bg-brand-surface/50 px-8 py-4 flex flex-col gap-3 pb-[max(1rem,env(safe-area-inset-bottom,0px))]">
+                <div className="flex justify-between items-center gap-4">
+                  <span className="text-[9px] tracking-[0.2em] font-heading text-brand-muted text-left leading-snug">
+                    {t('hubFooter').split('•')[0]?.trim()}
+                  </span>
+                  <span className="text-[9px] tracking-[0.2em] font-heading text-brand-primary text-right shrink-0">
+                    {t('lateNight')}
+                  </span>
+                </div>
+                <DeveloperCredit t={t} className="text-center" />
+              </div>
             </div>
           </ScreenContainer>
         )}
