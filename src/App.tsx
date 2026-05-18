@@ -78,125 +78,134 @@ const MENU_ITEMS: MenuItem[] = [
   item('h1', 'HOT_DRINKS', 'Kafa espresso', 'Espresso', '2,50', {
     image: '/topli napitci/espresso.png'
   }),
-  item('h2', 'HOT_DRINKS', 'Kafa espresso sa mlijekom — mala', 'Espresso with milk — small', '3,00'),
-  item('h3', 'HOT_DRINKS', 'Kafa espresso sa mlijekom — velika', 'Espresso with milk — large', '3,50'),
-  item('h4', 'HOT_DRINKS', 'Kafa espresso — produžena u veliku šolju', 'Espresso — extended in a large cup', '3,00'),
-  item('h5', 'HOT_DRINKS', 'Kafa espresso sa šlagom', 'Espresso with whipped cream', '3,50', {
-    image: '/topli napitci/kafa sa slagom.png'
-  }),
-  item('h6', 'HOT_DRINKS', 'Macchiato — mali', 'Macchiato — small', '3,50', {
+  item('h2', 'HOT_DRINKS', 'Kafa espresso sa mlijekom - mala', 'Espresso with milk - small', '3,00', {
     image: '/topli napitci/mali machiatto.png'
   }),
-  item('h7', 'HOT_DRINKS', 'Macchiato — veliki', 'Macchiato — large', '4,00', {
+  item('h3', 'HOT_DRINKS', 'Kafa espresso sa mlijekom - velika', 'Espresso with milk - large', '3,50', {
+    image: '/topli napitci/veliki machiatto.png'
+  }),
+  item('h4', 'HOT_DRINKS', 'Kafa espresso - produžena u veliku šoljicu', 'Espresso - extended in a large cup', '3,00'),
+  item('h5', 'HOT_DRINKS', 'Kafa espresso sa slagom', 'Espresso with whipped cream', '3,50', {
+    image: '/topli napitci/kafa sa slagom.png'
+  }),
+  item('h6', 'HOT_DRINKS', 'Machiatto - mali', 'Machiatto - small', '3,50', {
+    image: '/topli napitci/mali machiatto.png'
+  }),
+  item('h7', 'HOT_DRINKS', 'Machiatto - veliki', 'Machiatto - large', '4,00', {
     image: '/topli napitci/veliki machiatto.png'
   }),
   item('h8', 'HOT_DRINKS', 'Cappuccino', 'Cappuccino', '5,00'),
-  item('h9', 'HOT_DRINKS', 'Latte macchiato — mali', 'Latte macchiato — small', '4,00'),
-  item('h10', 'HOT_DRINKS', 'Latte macchiato — veliki', 'Latte macchiato — large', '5,00'),
-  item('h11', 'HOT_DRINKS', 'Nescafé Cappuccino', 'Nescafé Cappuccino', '4,00'),
-  item('h12', 'HOT_DRINKS', 'Topla čokolada', 'Hot chocolate', '4,50'),
+  item('h9', 'HOT_DRINKS', 'Latte Machiatto - mali', 'Latte Machiatto - small', '4,00', {
+    image: '/topli napitci/mali machiatto.png'
+  }),
+  item('h10', 'HOT_DRINKS', 'Latte Machiatto - veliki', 'Latte Machiatto - large', '6,00', {
+    image: '/topli napitci/veliki machiatto.png'
+  }),
+  item('h11', 'HOT_DRINKS', 'Nescafe Cappuccino', 'Nescafe Cappuccino', '4,00'),
+  item('h12', 'HOT_DRINKS', 'Topla čokolada', 'Hot chocolate', '4,00'),
   item('h13', 'HOT_DRINKS', 'Čaj', 'Tea', '3,50'),
   item('h14', 'HOT_DRINKS', 'Irish coffee', 'Irish coffee', '6,00'),
   item(
     'h15',
     'HOT_DRINKS',
-    'Ekspreso kafa',
-    'Espresso',
+    'Ekspresso',
+    'Ekspresso',
     '10,00',
     { isSpecial: true }
   ),
 
   // Sokovi gazirani 0,33 l
-  item('s1', 'SODA', 'Coca-Cola', 'Coca-Cola', '4,00'),
+  item('s1', 'SODA', 'Coca- Cola', 'Coca- Cola', '4,00'),
   item('s2', 'SODA', 'Coca-Cola Zero', 'Coca-Cola Zero', '4,00'),
   item('s3', 'SODA', 'Fanta Orange', 'Fanta Orange', '4,00'),
   item('s4', 'SODA', 'Sprite', 'Sprite', '4,00'),
   item('s5', 'SODA', 'Schweppes Tonic', 'Schweppes Tonic', '4,00'),
   item('s6', 'SODA', 'Schweppes Bitter Lemon', 'Schweppes Bitter Lemon', '4,00'),
-  item('s7', 'SODA', 'Schweppes Tangerina', 'Schweppes Tangerina', '4,00'),
-  item('s8', 'SODA', 'Kiseljak voda', 'Kiseljak sparkling water', '3,00'),
+  item('s7', 'SODA', 'Schweppes Tangerine', 'Schweppes Tangerine', '4,00'),
+  item('s8', 'SODA', 'Kisela voda', 'Sparkling water', '3,00'),
   item('s9', 'SODA', 'Sensation', 'Sensation', '3,00'),
   item('s10', 'SODA', 'Prirodna voda', 'Still water', '2,50'),
   item('s11', 'SODA', 'Orangina', 'Orangina', '5,00'),
   item('s12', 'SODA', 'Red Bull', 'Red Bull', '6,00'),
 
-  // Sokovi negazirani 0,20 l — Kuća prirode
-  item('jn1', 'JUICE_BOTTLE', 'Kuća prirode — ananas', 'Kuća prirode — pineapple', '4,50', {
+  // Sokovi negazirani 0,20 l — Kuca prirode
+  item('jn1', 'JUICE_BOTTLE', 'Kuca prirode - ananas', 'Kuca prirode - pineapple', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn2', 'JUICE_BOTTLE', 'Kuća prirode — breskva', 'Kuća prirode — peach', '4,50', {
+  item('jn2', 'JUICE_BOTTLE', 'Kuca prirode - breskva', 'Kuca prirode - peach', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn3', 'JUICE_BOTTLE', 'Kuća prirode — jabuka', 'Kuća prirode — apple', '4,50', {
+  item('jn3', 'JUICE_BOTTLE', 'Kuca prirode - jabuka', 'Kuca prirode - apple', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn4', 'JUICE_BOTTLE', 'Kuća prirode — jagoda', 'Kuća prirode — strawberry', '4,50', {
+  item('jn4', 'JUICE_BOTTLE', 'Kuca prirode - jagoda', 'Kuca prirode - strawberry', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn5', 'JUICE_BOTTLE', 'Kuća prirode — aronija', 'Kuća prirode — chokeberry', '4,50', {
+  item('jn5', 'JUICE_BOTTLE', 'Kuca prirode - aronija', 'Kuca prirode - chokeberry', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn6', 'JUICE_BOTTLE', 'Kuća prirode — narandža', 'Kuća prirode — orange', '4,50', {
+  item('jn6', 'JUICE_BOTTLE', 'Kuca prirode - narandža', 'Kuca prirode - orange', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn7', 'JUICE_BOTTLE', 'Kuća prirode — banana', 'Kuća prirode — banana', '4,50', {
+  item('jn7', 'JUICE_BOTTLE', 'Kuca prirode - banana', 'Kuca prirode - banana', '4,50', {
     descBs: '0,20 l',
     descEn: '0.20 L'
   }),
-  item('jn8', 'JUICE_BOTTLE', 'Cedevita — limun', 'Cedevita — lemon', '4,00'),
-  item('jn9', 'JUICE_BOTTLE', 'Cedevita — narandža', 'Cedevita — orange', '4,00'),
+  item('jn8', 'JUICE_BOTTLE', 'Cedevita limun', 'Cedevita lemon', '4,00'),
+  item('jn9', 'JUICE_BOTTLE', 'Cedevita narandža', 'Cedevita orange', '4,00'),
 
   // Prirodni sokovi
   item('jf1', 'JUICE_FRESH', 'Cijeđena narandža', 'Fresh orange juice', '5,00'),
   item('jf2', 'JUICE_FRESH', 'Limunada', 'Lemonade', '4,00'),
   item('jf3', 'JUICE_FRESH', 'Cijeđeni mix', 'Fresh mixed juice', '6,00'),
+  item('jf4', 'JUICE_FRESH', 'Zova - prirodni sok', 'Zova - natural juice', '2,50'),
   // Pivo 0,33 l
   item('bb1', 'BEER_BOTTLE', 'Blanc', 'Blanc', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
-  item('bb2', 'BEER_BOTTLE', 'Tuborg', 'Tuborg', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
-  item('bb3', 'BEER_BOTTLE', 'Budweiser', 'Budweiser', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
+  item('bb2', 'BEER_BOTTLE', 'Tuborg', 'Tuborg', '3,50', { descBs: '0,33 l', descEn: '0.33 L' }),
+  item('bb3', 'BEER_BOTTLE', 'Budwesier', 'Budwesier', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
   item('bb4', 'BEER_BOTTLE', 'Erdinger svijetlo', 'Erdinger pale', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
   item('bb5', 'BEER_BOTTLE', 'Erdinger tamno', 'Erdinger dark', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
   item('bb6', 'BEER_BOTTLE', 'Carlsberg', 'Carlsberg', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
-  item('bb7', 'BEER_BOTTLE', 'Somersby', 'Somersby', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
+  item('bb7', 'BEER_BOTTLE', 'Somersby', 'Somersby', '4,00', { descBs: '0,33 l', descEn: '0.33 L' }),
 
   // Točeno pivo
-  item('bd1', 'BEER_DRAFT', 'Carlsberg — malo', 'Carlsberg — small', '4,00', {
+  item('bd1', 'BEER_DRAFT', 'Carlsberg - malo', 'Carlsberg - small', '4,00', {
     descBs: '0,33 l',
     descEn: '0.33 L'
   }),
-  item('bd2', 'BEER_DRAFT', 'Carlsberg — veliko', 'Carlsberg — large', '5,00', {
+  item('bd2', 'BEER_DRAFT', 'Carlsberg - veliko', 'Carlsberg - large', '5,00', {
     descBs: '0,50 l',
     descEn: '0.50 L'
   }),
-  item('bd3', 'BEER_DRAFT', 'Blanc — malo', 'Blanc — small', '4,00', {
+  item('bd3', 'BEER_DRAFT', 'Blanc - malo', 'Blanc - small', '4,00', {
     descBs: '0,33 l',
     descEn: '0.33 L'
   }),
-  item('bd4', 'BEER_DRAFT', 'Blanc — veliko', 'Blanc — large', '5,00', {
+  item('bd4', 'BEER_DRAFT', 'Blanc - veliko', 'Blanc - large', '5,00', {
     descBs: '0,50 l',
     descEn: '0.50 L'
   }),
 
   // Vina
-  item('w1', 'WINE', 'Žilavka Milas — čaša', 'Žilavka Milas — glass', '7,00', {
+  item('w1', 'WINE', 'Žilavka Milas - čaša', 'Žilavka Milas - glass', '7,00', {
     descBs: '0,15 l',
     descEn: '0.15 L'
   }),
-  item('w2', 'WINE', 'Blatina Milas — čaša', 'Blatina Milas — glass', '7,00', {
+  item('w2', 'WINE', 'Blatina Milas - čaša', 'Blatina Milas - glass', '7,00', {
     descBs: '0,15 l',
     descEn: '0.15 L'
   }),
-  item('w3', 'WINE', 'Rosé Marijanović — čaša', 'Rosé Marijanović — glass', '7,00', {
+  item('w3', 'WINE', 'Rose Marijanović - čaša', 'Rose Marijanović - glass', '7,00', {
     descBs: '0,15 l',
     descEn: '0.15 L'
   }),
-  item('w4', 'WINE', 'Žilavka Marijanović', 'Žilavka Marijanović', '35,00', {
+  item('w4', 'WINE', 'Žilavka Marijanović', 'Žilavka Marijanović', '55,00', {
     descBs: '0,75 l',
     descEn: '0.75 L'
   }),
@@ -215,42 +224,43 @@ const MENU_ITEMS: MenuItem[] = [
 
   // Rakije 0,03 l
   item('r1', 'RAKIJA', 'Višnja', 'Sour cherry', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r2', 'RAKIJA', 'Viljamovka', 'Williams pear', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r3', 'RAKIJA', 'Medovača', 'Honey brandy', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r4', 'RAKIJA', 'Istra sa 21 biljkom', 'Istra herbal (21 botanicals)', '4,00', {
+  item('r2', 'RAKIJA', 'Vidarica', 'Vidarica', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r3', 'RAKIJA', 'Meduška', 'Meduška', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r4', 'RAKIJA', 'Vilijamovka', 'Williams pear', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r5', 'RAKIJA', 'Jabuka Zlatni Delišes', 'Apple Zlatni Delišes', '4,00', {
     descBs: '0,03 l',
     descEn: '0.03 L'
   }),
-  item('r5', 'RAKIJA', 'Dunja', 'Quince', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r6', 'RAKIJA', 'Kajsija', 'Apricot', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r7', 'RAKIJA', 'Šljiva', 'Plum', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r8', 'RAKIJA', 'Travarica', 'Herbal rakija', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r9', 'RAKIJA', 'Grozđana', 'Grape pomace', '3,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r6', 'RAKIJA', 'Dunja', 'Quince', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r7', 'RAKIJA', 'Kajsija', 'Apricot', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r8', 'RAKIJA', 'Šljiva', 'Plum', '3,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r9', 'RAKIJA', 'Travarica', 'Herbal rakija', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r10', 'RAKIJA', 'Grozdana', 'Grape pomace', '3,00', { descBs: '0,03 l', descEn: '0.03 L' }),
 
   // Žestoka pića
-  item('sp1', 'SPIRITS', 'Jack Daniel’s', 'Jack Daniel’s', '6,00'),
+  item('sp1', 'SPIRITS', 'Jack Daniels', 'Jack Daniels', '6,00'),
   item('sp2', 'SPIRITS', 'Chivas', 'Chivas', '7,00'),
-  item('sp3', 'SPIRITS', 'Johnnie Walker — Black Label', 'Johnnie Walker — Black Label', '7,00'),
-  item('sp4', 'SPIRITS', 'Johnnie Walker — Red Label', 'Johnnie Walker — Red Label', '5,00'),
+  item('sp3', 'SPIRITS', 'Johnnie Walker - black', 'Johnnie Walker - black', '7,00'),
+  item('sp4', 'SPIRITS', 'Johnnie Walker - red', 'Johnnie Walker - red', '5,00'),
   item('sp5', 'SPIRITS', 'Smirnoff', 'Smirnoff', '4,00'),
-  item('sp6', 'SPIRITS', 'Gordon’s Dry Gin', 'Gordon’s Dry Gin', '5,00'),
-  item('sp7', 'SPIRITS', 'Jägermeister', 'Jägermeister', '4,00'),
+  item('sp6', 'SPIRITS', 'Gordon Dry Gin', 'Gordon Dry Gin', '5,00'),
+  item('sp7', 'SPIRITS', 'Jagermeister', 'Jagermeister', '4,00'),
   item('sp8', 'SPIRITS', 'Courvoisier', 'Courvoisier', '8,00'),
   item('sp9', 'SPIRITS', 'Glenlivet', 'Glenlivet', '8,00'),
-  item('sp10', 'SPIRITS', 'Aperol', 'Aperol', '6,00'),
+  item('sp10', 'SPIRITS', 'Aperol', 'Aperol', '8,00'),
   item('sp11', 'SPIRITS', 'Pelinkovac', 'Pelinkovac', '4,00'),
-  item('sp12', 'SPIRITS', 'Tequila silver', 'Tequila silver', '4,00'),
-  item('sp13', 'SPIRITS', 'Tequila gold', 'Tequila gold', '4,00'),
+  item('sp12', 'SPIRITS', 'Tequila Silver', 'Tequila Silver', '4,00'),
+  item('sp13', 'SPIRITS', 'Tequila Gold', 'Tequila Gold', '4,00'),
   item('sp14', 'SPIRITS', 'Bacardi', 'Bacardi', '4,00'),
 
-  // Likeri 0,05 l
-  item('l1', 'LIQUEURS', 'Piña Colada', 'Piña Colada', '3,50', { descBs: '0,05 l', descEn: '0.05 L' }),
-  item('l2', 'LIQUEURS', 'Baileys', 'Baileys', '5,00', { descBs: '0,05 l', descEn: '0.05 L' })
+  // Likeri 0,03 l
+  item('l1', 'LIQUEURS', 'Pina Colada', 'Pina Colada', '3,50', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('l2', 'LIQUEURS', 'Baileys', 'Baileys', '5,00', { descBs: '0,03 l', descEn: '0.03 L' })
 ];
 
 const CATEGORY_NOTE: Partial<Record<Category, LocalizedText>> = {
   HOT_DRINKS: {
-    bs: 'Zašto 10 KM? Zato što svaki put kad neko naruči ekspreso kafu, jedan Italijan padne s Vespe.',
+    bs: 'Zašto 10 KM? Zato što svaki put kad neko naruči ekspresso, jedan Italijan padne s Vespe.',
     en: 'Why 10 KM? Because every time someone orders an espresso, an Italian falls off a Vespa.'
   }
 };
@@ -271,7 +281,7 @@ const UI: Record<Lang, Record<string, string>> = {
     catWine: 'Vina',
     catRakija: 'Rakije 0,03 l',
     catSpirits: 'Žestoka pića',
-    catLiqueurs: 'Likeri 0,05 l',
+    catLiqueurs: 'Likeri 0,03 l',
     active: 'AKTIVNO',
     hubFooter:
       'UR CAFFE BAR I SLASTIČARNICA "ZRNO" • VL. EMIR MUJIČIĆ • Jovana Bijelica 1',
@@ -309,7 +319,7 @@ const UI: Record<Lang, Record<string, string>> = {
     catWine: 'Wines',
     catRakija: 'Fruit brandy 0.03 L',
     catSpirits: 'Spirits',
-    catLiqueurs: 'Liqueurs 0.05 L',
+    catLiqueurs: 'Liqueurs 0.03 L',
     active: 'ACTIVE',
     hubFooter:
       'UR CAFFE BAR & PATISSERIE "ZRNO" • OWNER EMIR MUJIČIĆ • Jovana Bijelica 1',
