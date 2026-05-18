@@ -43,6 +43,7 @@ interface MenuItem {
   tastingNotes?: LocalizedText;
   isAvailable: boolean;
   isSpecial?: boolean;
+  image?: string;
 }
 
 const ALL_TAB = 'All';
@@ -74,13 +75,21 @@ function item(
 
 const MENU_ITEMS: MenuItem[] = [
   // Topli napitci
-  item('h1', 'HOT_DRINKS', 'Kafa espresso', 'Espresso', '2,50'),
+  item('h1', 'HOT_DRINKS', 'Kafa espresso', 'Espresso', '2,50', {
+    image: '/topli napitci/espresso.png'
+  }),
   item('h2', 'HOT_DRINKS', 'Kafa espresso sa mlijekom — mala', 'Espresso with milk — small', '3,00'),
   item('h3', 'HOT_DRINKS', 'Kafa espresso sa mlijekom — velika', 'Espresso with milk — large', '3,50'),
   item('h4', 'HOT_DRINKS', 'Kafa espresso — produžena u veliku šolju', 'Espresso — extended in a large cup', '3,00'),
-  item('h5', 'HOT_DRINKS', 'Kafa espresso sa šlagom', 'Espresso with whipped cream', '3,50'),
-  item('h6', 'HOT_DRINKS', 'Macchiato — mali', 'Macchiato — small', '3,50'),
-  item('h7', 'HOT_DRINKS', 'Macchiato — veliki', 'Macchiato — large', '4,00'),
+  item('h5', 'HOT_DRINKS', 'Kafa espresso sa šlagom', 'Espresso with whipped cream', '3,50', {
+    image: '/topli napitci/kafa sa slagom.png'
+  }),
+  item('h6', 'HOT_DRINKS', 'Macchiato — mali', 'Macchiato — small', '3,50', {
+    image: '/topli napitci/mali machiatto.png'
+  }),
+  item('h7', 'HOT_DRINKS', 'Macchiato — veliki', 'Macchiato — large', '4,00', {
+    image: '/topli napitci/veliki machiatto.png'
+  }),
   item('h8', 'HOT_DRINKS', 'Cappuccino', 'Cappuccino', '5,00'),
   item('h9', 'HOT_DRINKS', 'Latte macchiato — mali', 'Latte macchiato — small', '4,00'),
   item('h10', 'HOT_DRINKS', 'Latte macchiato — veliki', 'Latte macchiato — large', '5,00'),
@@ -265,7 +274,7 @@ const UI: Record<Lang, Record<string, string>> = {
     catLiqueurs: 'Likeri 0,05 l',
     active: 'AKTIVNO',
     hubFooter:
-      'UR CAFFE BAR I SLASTIČARNICA "ZRNO" • VL. EMIR MUJIČIĆ • LOPATA B.B., ILIDŽA, SARAJEVO',
+      'UR CAFFE BAR I SLASTIČARNICA "ZRNO" • VL. EMIR MUJIČIĆ • Jovana Bijelica 1',
     listMetaPrefix: '03 / CJENOVNIK /',
     listSuffix: 'LISTA',
     stockNotice: 'Nema stavki u ovoj kategoriji',
@@ -303,7 +312,7 @@ const UI: Record<Lang, Record<string, string>> = {
     catLiqueurs: 'Liqueurs 0.05 L',
     active: 'ACTIVE',
     hubFooter:
-      'UR CAFFE BAR & PATISSERIE "ZRNO" • OWNER EMIR MUJIČIĆ • LOPATA B.B., ILIDŽA, SARAJEVO',
+      'UR CAFFE BAR & PATISSERIE "ZRNO" • OWNER EMIR MUJIČIĆ • Jovana Bijelica 1',
     listMetaPrefix: '03 / MENU /',
     listSuffix: 'LIST',
     stockNotice: 'No items in this category',
@@ -382,6 +391,28 @@ const HUB_CATEGORIES: { type: Category; labelKey: string; num: string }[] = [
 // --- Components ---
 
 const GrainOverlay = () => <div className="noise-overlay" />;
+
+const ItemDetailHero = ({ src, alt }: { src: string; alt: string }) => {
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+
+  return (
+    <div className="relative w-full aspect-[4/3] border-b border-brand-primary overflow-hidden bg-brand-background">
+      <img
+        src={encodeURI(src)}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover"
+        onError={() => setFailed(true)}
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-brand-surface via-brand-surface/25 to-transparent pointer-events-none"
+        aria-hidden
+      />
+    </div>
+  );
+};
 
 interface ScreenContainerProps {
   children: React.ReactNode;
@@ -738,11 +769,18 @@ export default function App() {
                 onClick={e => e.stopPropagation()}
                 className="w-full shrink-0 bg-brand-surface border-t border-brand-primary pb-[max(3rem,env(safe-area-inset-bottom,0px))]"
               >
+              {selectedItem.image && (
+                <ItemDetailHero src={selectedItem.image} alt={pick(selectedItem.name)} />
+              )}
               <div className="p-8 pb-12 relative">
                 <button
                   type="button"
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-6 right-6 p-2 bg-brand-background border border-brand-border text-brand-muted hover:text-brand-text active:scale-95 transition-all"
+                  className={`absolute top-6 right-6 p-2 border border-brand-border text-brand-muted hover:text-brand-text active:scale-95 transition-all z-10 ${
+                    selectedItem.image
+                      ? 'bg-brand-background/90 backdrop-blur-sm'
+                      : 'bg-brand-background'
+                  }`}
                 >
                   <X size={20} />
                 </button>
