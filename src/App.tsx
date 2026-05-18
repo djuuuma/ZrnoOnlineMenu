@@ -76,35 +76,47 @@ function item(
 const MENU_ITEMS: MenuItem[] = [
   // Topli napitci
   item('h1', 'HOT_DRINKS', 'Kafa espresso', 'Espresso', '2,50', {
-    image: '/topli napitci/espresso.png'
+    image: '/topli napitci/espresso.webp'
   }),
   item('h2', 'HOT_DRINKS', 'Kafa espresso sa mlijekom - mala', 'Espresso with milk - small', '3,00', {
-    image: '/topli napitci/mali machiatto.png'
+    image: '/topli napitci/mali machiatto.webp'
   }),
   item('h3', 'HOT_DRINKS', 'Kafa espresso sa mlijekom - velika', 'Espresso with milk - large', '3,50', {
-    image: '/topli napitci/veliki machiatto.png'
+    image: '/topli napitci/veliki machiatto.webp'
   }),
-  item('h4', 'HOT_DRINKS', 'Kafa espresso - produžena u veliku šoljicu', 'Espresso - extended in a large cup', '3,00'),
+  item('h4', 'HOT_DRINKS', 'Kafa espresso - produžena u veliku šoljicu', 'Espresso - extended in a large cup', '3,00', {
+    image: '/topli napitci/espresso produzeni.webp'
+  }),
   item('h5', 'HOT_DRINKS', 'Kafa espresso sa slagom', 'Espresso with whipped cream', '3,50', {
-    image: '/topli napitci/kafa sa slagom.png'
+    image: '/topli napitci/kafa sa slagom.webp'
   }),
   item('h6', 'HOT_DRINKS', 'Machiatto - mali', 'Machiatto - small', '3,50', {
-    image: '/topli napitci/mali machiatto.png'
+    image: '/topli napitci/mali machiatto.webp'
   }),
   item('h7', 'HOT_DRINKS', 'Machiatto - veliki', 'Machiatto - large', '4,00', {
-    image: '/topli napitci/veliki machiatto.png'
+    image: '/topli napitci/veliki machiatto.webp'
   }),
-  item('h8', 'HOT_DRINKS', 'Cappuccino', 'Cappuccino', '5,00'),
+  item('h8', 'HOT_DRINKS', 'Cappuccino', 'Cappuccino', '5,00', {
+    image: '/topli napitci/capucino.webp'
+  }),
   item('h9', 'HOT_DRINKS', 'Latte Machiatto - mali', 'Latte Machiatto - small', '4,00', {
-    image: '/topli napitci/mali machiatto.png'
+    image: '/topli napitci/mali machiatto.webp'
   }),
   item('h10', 'HOT_DRINKS', 'Latte Machiatto - veliki', 'Latte Machiatto - large', '6,00', {
-    image: '/topli napitci/veliki machiatto.png'
+    image: '/topli napitci/veliki machiatto.webp'
   }),
-  item('h11', 'HOT_DRINKS', 'Nescafe Cappuccino', 'Nescafe Cappuccino', '4,00'),
-  item('h12', 'HOT_DRINKS', 'Topla čokolada', 'Hot chocolate', '4,00'),
-  item('h13', 'HOT_DRINKS', 'Čaj', 'Tea', '3,50'),
-  item('h14', 'HOT_DRINKS', 'Irish coffee', 'Irish coffee', '6,00'),
+  item('h11', 'HOT_DRINKS', 'Nescafe Cappuccino', 'Nescafe Cappuccino', '4,00', {
+    image: '/topli napitci/nescafe.webp'
+  }),
+  item('h12', 'HOT_DRINKS', 'Topla čokolada', 'Hot chocolate', '4,00', {
+    image: '/topli napitci/hot chocolate.webp'
+  }),
+  item('h13', 'HOT_DRINKS', 'Čaj', 'Tea', '3,50', {
+    image: '/topli napitci/caj.webp'
+  }),
+  item('h14', 'HOT_DRINKS', 'Irish coffee', 'Irish coffee', '6,00', {
+    image: '/topli napitci/irish coffee.webp'
+  }),
   item(
     'h15',
     'HOT_DRINKS',
@@ -115,60 +127,113 @@ const MENU_ITEMS: MenuItem[] = [
   ),
 
   // Sokovi gazirani 0,33 l
-  item('s1', 'SODA', 'Coca- Cola', 'Coca- Cola', '4,00'),
-  item('s2', 'SODA', 'Coca-Cola Zero', 'Coca-Cola Zero', '4,00'),
-  item('s3', 'SODA', 'Fanta Orange', 'Fanta Orange', '4,00'),
-  item('s4', 'SODA', 'Sprite', 'Sprite', '4,00'),
-  item('s5', 'SODA', 'Schweppes Tonic', 'Schweppes Tonic', '4,00'),
-  item('s6', 'SODA', 'Schweppes Bitter Lemon', 'Schweppes Bitter Lemon', '4,00'),
-  item('s7', 'SODA', 'Schweppes Tangerine', 'Schweppes Tangerine', '4,00'),
-  item('s8', 'SODA', 'Kisela voda', 'Sparkling water', '3,00'),
-  item('s9', 'SODA', 'Sensation', 'Sensation', '3,00'),
-  item('s10', 'SODA', 'Prirodna voda', 'Still water', '2,50'),
-  item('s11', 'SODA', 'Orangina', 'Orangina', '5,00'),
-  item('s12', 'SODA', 'Red Bull', 'Red Bull', '6,00'),
+  item('s1', 'SODA', 'Coca- Cola', 'Coca- Cola', '4,00', {
+    image: '/gazirani sokovi/cocacola.webp'
+  }),
+  item('s2', 'SODA', 'Coca-Cola Zero', 'Coca-Cola Zero', '4,00', {
+    image: '/gazirani sokovi/cocacola.webp'
+  }),
+  item('s3', 'SODA', 'Fanta Orange', 'Fanta Orange', '4,00', {
+    image: '/gazirani sokovi/fanta.webp'
+  }),
+  item('s4', 'SODA', 'Sprite', 'Sprite', '4,00', {
+    image: '/gazirani sokovi/sprite.webp'
+  }),
+  item('s5', 'SODA', 'Schweppes Tonic', 'Schweppes Tonic', '4,00', {
+    image: '/gazirani sokovi/schweps tonic.webp'
+  }),
+  item('s6', 'SODA', 'Schweppes Bitter Lemon', 'Schweppes Bitter Lemon', '4,00', {
+    image: '/gazirani sokovi/bitter lemon.webp'
+  }),
+  item('s7', 'SODA', 'Schweppes Tangerine', 'Schweppes Tangerine', '4,00', {
+    image: '/gazirani sokovi/tangerine.webp'
+  }),
+  item('s8', 'SODA', 'Kisela voda', 'Sparkling water', '3,00', {
+    image: '/gazirani sokovi/kiseljak kisela.webp'
+  }),
+  item('s9', 'SODA', 'Sensation', 'Sensation', '3,00', {
+    image: '/gazirani sokovi/sensation.webp'
+  }),
+  item('s10', 'SODA', 'Prirodna voda', 'Still water', '2,50', {
+    image: '/gazirani sokovi/voda.webp'
+  }),
+  item('s11', 'SODA', 'Orangina', 'Orangina', '5,00', {
+    image: '/gazirani sokovi/orangina.webp'
+  }),
+  item('s12', 'SODA', 'Red Bull', 'Red Bull', '6,00', {
+    image: '/gazirani sokovi/red bull.webp'
+  }),
 
   // Sokovi negazirani 0,20 l — Kuca prirode
   item('jn1', 'JUICE_BOTTLE', 'Kuca prirode - ananas', 'Kuca prirode - pineapple', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/ananas.webp'
   }),
   item('jn2', 'JUICE_BOTTLE', 'Kuca prirode - breskva', 'Kuca prirode - peach', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/breskva.webp'
   }),
   item('jn3', 'JUICE_BOTTLE', 'Kuca prirode - jabuka', 'Kuca prirode - apple', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/jabuka.webp'
   }),
   item('jn4', 'JUICE_BOTTLE', 'Kuca prirode - jagoda', 'Kuca prirode - strawberry', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/jagoda.webp'
   }),
   item('jn5', 'JUICE_BOTTLE', 'Kuca prirode - aronija', 'Kuca prirode - chokeberry', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/aronija.webp'
   }),
   item('jn6', 'JUICE_BOTTLE', 'Kuca prirode - narandža', 'Kuca prirode - orange', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/narandza.webp'
   }),
   item('jn7', 'JUICE_BOTTLE', 'Kuca prirode - banana', 'Kuca prirode - banana', '4,50', {
     descBs: '0,20 l',
-    descEn: '0.20 L'
+    descEn: '0.20 L',
+    image: '/negazirani sokovi/banana.webp'
   }),
-  item('jn8', 'JUICE_BOTTLE', 'Cedevita limun', 'Cedevita lemon', '4,00'),
-  item('jn9', 'JUICE_BOTTLE', 'Cedevita narandža', 'Cedevita orange', '4,00'),
+  item('jn8', 'JUICE_BOTTLE', 'Cedevita limun', 'Cedevita lemon', '4,00', {
+    image: '/negazirani sokovi/cedevita limun.webp'
+  }),
+  item('jn9', 'JUICE_BOTTLE', 'Cedevita narandža', 'Cedevita orange', '4,00', {
+    image: '/negazirani sokovi/cedevita naranca.webp'
+  }),
 
   // Prirodni sokovi
-  item('jf1', 'JUICE_FRESH', 'Cijeđena narandža', 'Fresh orange juice', '5,00'),
-  item('jf2', 'JUICE_FRESH', 'Limunada', 'Lemonade', '4,00'),
+  item('jf1', 'JUICE_FRESH', 'Cijeđena narandža', 'Fresh orange juice', '5,00', {
+    image: '/fresh juices/narandza.webp'
+  }),
+  item('jf2', 'JUICE_FRESH', 'Limunada', 'Lemonade', '4,00', {
+    image: '/fresh juices/limunada.webp'
+  }),
   item('jf3', 'JUICE_FRESH', 'Cijeđeni mix', 'Fresh mixed juice', '6,00'),
-  item('jf4', 'JUICE_FRESH', 'Zova - prirodni sok', 'Zova - natural juice', '2,50'),
+  item('jf4', 'JUICE_FRESH', 'Zova - prirodni sok', 'Zova - natural juice', '2,50', {
+    image: '/fresh juices/zova.webp'
+  }),
   // Pivo 0,33 l
-  item('bb1', 'BEER_BOTTLE', 'Blanc', 'Blanc', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
-  item('bb2', 'BEER_BOTTLE', 'Tuborg', 'Tuborg', '3,50', { descBs: '0,33 l', descEn: '0.33 L' }),
-  item('bb3', 'BEER_BOTTLE', 'Budwesier', 'Budwesier', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
+  item('bb1', 'BEER_BOTTLE', 'Blanc', 'Blanc', '5,00', {
+    descBs: '0,33 l',
+    descEn: '0.33 L',
+    image: '/pive/blanc.webp'
+  }),
+  item('bb2', 'BEER_BOTTLE', 'Tuborg', 'Tuborg', '3,50', {
+    descBs: '0,33 l',
+    descEn: '0.33 L',
+    image: '/pive/tuborg.webp'
+  }),
+  item('bb3', 'BEER_BOTTLE', 'Budwesier', 'Budwesier', '4,50', {
+    descBs: '0,33 l',
+    descEn: '0.33 L',
+    image: '/pive/budweiser.webp'
+  }),
   item('bb4', 'BEER_BOTTLE', 'Erdinger svijetlo', 'Erdinger pale', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
   item('bb5', 'BEER_BOTTLE', 'Erdinger tamno', 'Erdinger dark', '5,00', { descBs: '0,33 l', descEn: '0.33 L' }),
   item('bb6', 'BEER_BOTTLE', 'Carlsberg', 'Carlsberg', '4,50', { descBs: '0,33 l', descEn: '0.33 L' }),
@@ -177,19 +242,23 @@ const MENU_ITEMS: MenuItem[] = [
   // Točeno pivo
   item('bd1', 'BEER_DRAFT', 'Carlsberg - malo', 'Carlsberg - small', '4,00', {
     descBs: '0,33 l',
-    descEn: '0.33 L'
+    descEn: '0.33 L',
+    image: '/tocena piva/carlsberg toceno.webp'
   }),
   item('bd2', 'BEER_DRAFT', 'Carlsberg - veliko', 'Carlsberg - large', '5,00', {
     descBs: '0,50 l',
-    descEn: '0.50 L'
+    descEn: '0.50 L',
+    image: '/tocena piva/carlsberg toceno.webp'
   }),
   item('bd3', 'BEER_DRAFT', 'Blanc - malo', 'Blanc - small', '4,00', {
     descBs: '0,33 l',
-    descEn: '0.33 L'
+    descEn: '0.33 L',
+    image: '/tocena piva/blanc toceno.webp'
   }),
   item('bd4', 'BEER_DRAFT', 'Blanc - veliko', 'Blanc - large', '5,00', {
     descBs: '0,50 l',
-    descEn: '0.50 L'
+    descEn: '0.50 L',
+    image: '/tocena piva/blanc toceno.webp'
   }),
 
   // Vina
