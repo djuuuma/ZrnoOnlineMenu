@@ -204,7 +204,7 @@ const MENU_ITEMS: MenuItem[] = [
     image: '/negazirani sokovi/cedevita limun.webp'
   }),
   item('jn9', 'JUICE_BOTTLE', 'Cedevita narandža', 'Cedevita orange', '4,00', {
-    image: '/negazirani sokovi/cedevita naranca.webp'
+    image: '/negazirani sokovi/cedevita narancav2.webp'
   }),
 
   // Prirodni sokovi
