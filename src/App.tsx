@@ -264,47 +264,91 @@ const MENU_ITEMS: MenuItem[] = [
   // Vina
   item('w1', 'WINE', 'Žilavka Milas - čaša', 'Žilavka Milas - glass', '7,00', {
     descBs: '0,15 l',
-    descEn: '0.15 L'
+    descEn: '0.15 L',
+    image: '/vina/zilavka milas casa i boca.webp'
   }),
   item('w2', 'WINE', 'Blatina Milas - čaša', 'Blatina Milas - glass', '7,00', {
     descBs: '0,15 l',
-    descEn: '0.15 L'
+    descEn: '0.15 L',
+    image: '/vina/blatina milas.webp'
   }),
   item('w3', 'WINE', 'Rose Marijanović - čaša', 'Rose Marijanović - glass', '7,00', {
     descBs: '0,15 l',
-    descEn: '0.15 L'
+    descEn: '0.15 L',
+    image: '/vina/rose marjanovic.webp'
   }),
   item('w4', 'WINE', 'Žilavka Marijanović', 'Žilavka Marijanović', '55,00', {
     descBs: '0,75 l',
-    descEn: '0.75 L'
+    descEn: '0.75 L',
+    image: '/vina/zilavka marjanovic.webp'
   }),
   item('w5', 'WINE', 'Barrique Marijanović', 'Barrique Marijanović', '75,00', {
     descBs: '0,75 l',
-    descEn: '0.75 L'
+    descEn: '0.75 L',
+    image: '/vina/barrique marjanovic.webp'
   }),
   item('w6', 'WINE', 'Vukoje Cabernet Sauvignon', 'Vukoje Cabernet Sauvignon', '65,00', {
     descBs: '0,75 l',
-    descEn: '0.75 L'
+    descEn: '0.75 L',
+    image: '/vina/vuokoje cabernet sauvignon.webp'
   }),
   item('w7', 'WINE', 'Vukoje Chardonnay', 'Vukoje Chardonnay', '60,00', {
     descBs: '0,75 l',
-    descEn: '0.75 L'
+    descEn: '0.75 L',
+    image: '/vina/vukoje chardonnay.webp'
   }),
 
   // Rakije 0,03 l
-  item('r1', 'RAKIJA', 'Višnja', 'Sour cherry', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r2', 'RAKIJA', 'Vidarica', 'Vidarica', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r3', 'RAKIJA', 'Meduška', 'Meduška', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r4', 'RAKIJA', 'Vilijamovka', 'Williams pear', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r1', 'RAKIJA', 'Višnja', 'Sour cherry', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/visnja.webp'
+  }),
+  item('r2', 'RAKIJA', 'Vidarica', 'Vidarica', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/vidarica.webp'
+  }),
+  item('r3', 'RAKIJA', 'Meduška', 'Meduška', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/Meduška.webp'
+  }),
+  item('r4', 'RAKIJA', 'Vilijamovka', 'Williams pear', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/viljamovka.webp'
+  }),
   item('r5', 'RAKIJA', 'Jabuka Zlatni Delišes', 'Apple Zlatni Delišes', '4,00', {
     descBs: '0,03 l',
-    descEn: '0.03 L'
+    descEn: '0.03 L',
+    image: '/rakija/jabuka zlatni delises.webp'
   }),
-  item('r6', 'RAKIJA', 'Dunja', 'Quince', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r7', 'RAKIJA', 'Kajsija', 'Apricot', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r8', 'RAKIJA', 'Šljiva', 'Plum', '3,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r9', 'RAKIJA', 'Travarica', 'Herbal rakija', '4,00', { descBs: '0,03 l', descEn: '0.03 L' }),
-  item('r10', 'RAKIJA', 'Grozdana', 'Grape pomace', '3,00', { descBs: '0,03 l', descEn: '0.03 L' }),
+  item('r6', 'RAKIJA', 'Dunja', 'Quince', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/dunja.webp'
+  }),
+  item('r7', 'RAKIJA', 'Kajsija', 'Apricot', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/kajsija.webp'
+  }),
+  item('r8', 'RAKIJA', 'Šljiva', 'Plum', '3,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/sljiva.webp'
+  }),
+  item('r9', 'RAKIJA', 'Travarica', 'Herbal rakija', '4,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/travarica.webp'
+  }),
+  item('r10', 'RAKIJA', 'Grozdana', 'Grape pomace', '3,00', {
+    descBs: '0,03 l',
+    descEn: '0.03 L',
+    image: '/rakija/grozdana.webp'
+  }),
 
   // Žestoka pića
   item('sp1', 'SPIRITS', 'Jack Daniels', 'Jack Daniels', '6,00'),
